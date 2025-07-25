@@ -1,0 +1,37 @@
+body {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #00b7ff;
+  color: #333;
+}
+
+h1 {
+  color: #4a90e2;
+}
+
+form, #library {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+

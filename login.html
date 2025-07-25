@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>로그인</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+    .login-box {
+      border: 1px solid #ccc;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+      width: 300px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .link {
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>로그인</h2>
+    <input type="text" id="username" placeholder="아이디" required />
+    <input type="password" id="password" placeholder="비밀번호" required />
+    <button onclick="login()">로그인</button>
+    <div class="link">
+      <a href="signup.html">회원가입</a>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+
+      if (storedUser && username === storedUser.username && password === storedUser.password) {
+        alert("로그인 성공!");
+        window.location.href = "library.html"; // 로그인 성공 시 도서관 페이지로 이동
+      } else {
+        alert("아이디 또는 비밀번호가 올바르지 않습니다.");
+      }
+    }
+  </script>
+</body>
+</html>
